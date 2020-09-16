@@ -43,8 +43,14 @@ if(isset($_GET['code']))
             curl_setopt($ch, CURLOPT_URL,$url);
             curl_setopt($ch, CURLOPT_USERAGENT, 'Jamineto');
             $result = curl_exec($ch);
-            var_dump(json_decode($result));
-            //"Authorization: token OAUTH-TOKEN"
+            //var_dump(json_decode($result));
+            $result = json_decode($result);
+            session_start();
+            $_SESSION['nome'] = $result->login;
+            $_SESSION['foto'] = $result->avatar_url;
+            $_SESSION['link'] = $result->html_url;
+            $_SESSION['token'] = $query['access_token'];
+            header('Location: /');
         }
         //access_token
         curl_close($ch);

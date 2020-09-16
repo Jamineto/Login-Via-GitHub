@@ -1,12 +1,12 @@
 <?php
 
-class User 
+class User
 {
     public $name;
     
-    function __construct()
+    function __construct($name)
     {
-        
+        $this->name = $name;
     }
 
 }
