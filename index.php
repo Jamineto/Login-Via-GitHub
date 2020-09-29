@@ -29,10 +29,10 @@
             </div>
             <div class="row">
               <div class="col">
-                <a href="'.$_SESSION['link'].'" class="btn btn-primary" role="button">Acessar perfil</a>
+                <a href="'.$_SESSION['link'].'" class="btn btn-primary" role="button">Profile Link</a>
               </div>
               <div class="col">
-                <a href="logout.php" class="btn btn-danger" role="button">Sair</a>
+                <a href="logout.php" class="btn btn-danger" role="button">Logout</a>
               </div>
             </div>
             <div class="row">
